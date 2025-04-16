@@ -1,0 +1,120 @@
+:root {
+  --name-color: #2f4f4f;
+  --rank-color: #8b0000;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.main {
+  grid-template-columns: repeat(4, 200px);
+  justify-content: center;
+  gap: 40px 30px;
+  margin: 0 auto;
+  padding: 30px 55px;
+  display: grid;
+  position: relative;
+}
+
+@media (width <= 1000px) {
+  .main {
+    grid-template-columns: repeat(3, 200px);
+  }
+}
+
+@media (width <= 750px) {
+  .main {
+    grid-template-columns: repeat(2, 200px);
+  }
+}
+
+.person {
+  text-align: center;
+  z-index: 1;
+  transform-origin: center;
+  flex-direction: column;
+  align-items: center;
+  width: 200px;
+  display: flex;
+  position: relative;
+}
+
+.person__photo {
+  width: 200px;
+  height: 200px;
+  position: relative;
+}
+
+.person__photo--img {
+  object-fit: cover;
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+}
+
+.person__photo--rank {
+  color: var(--rank-color);
+  background-color: #fff;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  width: 32px;
+  height: 32px;
+  font-size: 14px;
+  font-weight: 700;
+  display: flex;
+  position: absolute;
+  bottom: 80px;
+  right: 10px;
+  box-shadow: 0 0 4px #0000004d;
+}
+
+.person__details {
+  margin-top: 8px;
+}
+
+.person__details--name {
+  color: var(--name-color);
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.person__details--extra {
+  visibility: hidden;
+}
+
+.person:hover {
+  z-index: 10;
+  background-color: #eee;
+  transition: all 1s;
+  position: relative;
+  transform: scale(1.1);
+  box-shadow: 0 2px 10px #00000026;
+}
+
+.person:hover .person__photo--img {
+  object-fit: cover;
+  border-radius: 25%;
+  width: 100%;
+  height: 100%;
+}
+
+.person:hover .person__details--extra {
+  opacity: 1;
+  visibility: visible;
+  font-size: 21.6px;
+  font-weight: 400;
+}
+
+.person:hover .person__photo--rank {
+  bottom: 100px;
+  transform: scale(1.2);
+}
+
+.person:hover .person__details--name {
+  font-size: 24px;
+}
+/*# sourceMappingURL=html-css-practice.b1276d39.css.map */
