@@ -100,12 +100,11 @@ body {
   transform: scale(1.1);
   transition: 1s;
 
-  
 
   .person__photo--img {
     width: 100%;
     height: 100%;
-    border-radius: 25%;
+    border-radius: 60px;
     object-fit: cover;
   }
 
@@ -118,7 +117,7 @@ body {
 
   .person__photo--rank {
     transform: scale(1.2);
-    bottom: 100px;
+    bottom: 80px;
   }
 
   .person__details--name {
